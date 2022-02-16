@@ -1,27 +1,25 @@
 
-const myIncome = document.getElementById("income").value;
-const myIncomeValue = parseFloat(myIncome);
-console.log(myIncomeValue);
-
-const eatFood = document.getElementById("food").value;
-const eatFoodValue = parseFloat(eatFood);
-console.log(eatFoodValue);
-
-
-const myRent = document.getElementById("rent").value;
-const myRentValue = parseFloat(myRent);
-console.log(myRentValue);
-
-const myClothes = document.getElementById("clothes").value;
-const myClothesValue = parseFloat(myClothes);
-console.log(myClothesValue);
-
-
+//--------------My income, total expenses & remaining balance-------- 
 document.getElementById("calculate").addEventListener('click', function () {
 
+    const MyIncome = document.getElementById("income").value;
+    const MyIncomeValue = parseFloat(MyIncome);
 
+    const eatFood = document.getElementById("food").value;
+    const eatFoodValue = parseFloat(eatFood);
 
+    const myRent = document.getElementById("rent").value;
+    const myRentValue = parseFloat(myRent);
 
+    const myClothes = document.getElementById("clothes").value;
+    const myClothesValue = parseFloat(myClothes);
 
+    const total = eatFoodValue + myRentValue + myClothesValue;
+    document.getElementById("expenses").innerText = total;
+
+    const remainingBalance = MyIncomeValue - total;
+    document.getElementById("balance").innerText = remainingBalance;
 
 })
+
+document.getElementById
