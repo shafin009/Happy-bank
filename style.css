@@ -1,0 +1,38 @@
+/*--------------font type-----------*/
+h1{
+    font-family: 'Luxurious Roman', cursive;
+}
+/*-----------------images-------------*/
+.images{
+    width: 500px;
+    margin: 20px;
+}
+/*-------------calculation part----------*/
+.reality{
+    margin-left : 70px;
+}
+.save{
+    margin-left: 80px;
+    padding-right: 5px;
+}
+.calculate{
+    width:180px;
+    height:45px;
+    margin-left: 40%;
+  }
+.button{
+    width:70px;
+    /* height:0px; */
+    padding:10px; 
+}
+.resize{
+    width:90px;
+}
+/*------------------Media Query----------*/
+@media screen and (max-width:375px){
+    .save{
+        margin: 0;
+        padding: 0;
+    }
+    
+}
