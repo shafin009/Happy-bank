@@ -1,16 +1,18 @@
 
-//----------------------Calculate Part---------------
+//----------------------Calculate Part-----------------------
 
 document.getElementById("calculate").addEventListener("click", function () {
 	let income = parseFloat(document.getElementById('income').value);
 	let incomeSource = income;
 
 	//--------------error message-----------
+
 	if (isNaN(incomeSource) || incomeSource < 0) {
 		error('Please enter a valid number');
 	}
 
 	//------------------------Calculation--------------- 
+
 	let food = parseFloat(document.getElementById('food').value);
 	let rent = parseFloat(document.getElementById('rent').value);
 	let clothes = parseFloat(document.getElementById('clothes').value);
@@ -18,6 +20,8 @@ document.getElementById("calculate").addEventListener("click", function () {
 	let foodValue = food;
 	let rentValue = rent;
 	let clothesValue = clothes;
+
+	//------------------Error Message Handler----------------
 
 	if (isNaN(foodValue) || foodValue < 0) {
 		error('Please enter a valid number');
@@ -29,6 +33,7 @@ document.getElementById("calculate").addEventListener("click", function () {
 		error('Please enter a valid number');
 	}
 
+	//--------------Total Expenses Calculation-----------------
 
 	const total = foodValue + rentValue + clothesValue;
 	document.getElementById('expenses').innerText = total;
@@ -36,7 +41,7 @@ document.getElementById("calculate").addEventListener("click", function () {
 	const bill = incomeSource - total;
 	document.getElementById('balance').innerText = bill;
 
-	//--------------error message-----------
+	//--------------error message-------------
 
 	if (incomeSource < total) {
 		error('Error!!!')
@@ -45,21 +50,25 @@ document.getElementById("calculate").addEventListener("click", function () {
 
 });
 
+
+
+
 // ------------------------ Save Part ---------------------
 
 document.getElementById('saving-part').addEventListener("click", function () {
 
-
 	let income = parseFloat(document.getElementById('income').value);
 	let incomeSource = income;
 
-	let mybalance = parseFloat(document.getElementById('balance').value);
+
 	//------------------error message-------------
+
 	if (isNaN(incomeSource) || incomeSource < 0) {
 		error('Please enter a valid number!!!');
 	}
 
-	//------------------------Calculation--------------- 
+	//------------------------Saving Calculation --------------- 
+
 	let savingPercentage = parseFloat(document.getElementById('saving').value);
 	let savings = (incomeSource * savingPercentage) / 100;
 	let mySaving = savings;
@@ -71,6 +80,7 @@ document.getElementById('saving-part').addEventListener("click", function () {
 		error('Please enter a valid number!!!');
 	}
 	//-----------------calculation-------------------
+
 	document.getElementById('save').innerText = mySaving;
 	const foodValue = parseFloat(document.getElementById('food').value);
 	const rentValue = parseFloat(document.getElementById('rent').value);
@@ -79,10 +89,11 @@ document.getElementById('saving-part').addEventListener("click", function () {
 
 	//--------------error message---------------
 
-
 	const total = foodValue + rentValue + clothesValue;
 	const balance = incomeSource - total;
 	const remainingBalance = balance - mySaving;
+
+	//-------------------Remaining Rrror Handler Message----------
 
 	if (remainingBalance < 0) {
 		error('Invalid!');
@@ -93,6 +104,8 @@ document.getElementById('saving-part').addEventListener("click", function () {
 
 
 });
+
+//---------------------Error message Function-------------------
 
 function error(msg) {
 	return alert(msg);

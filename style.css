@@ -1,13 +1,18 @@
+
 /*--------------Font Type-----------*/
+
 h1{
     font-family: 'Luxurious Roman', cursive;
 }
+
 /*-----------------Images-------------*/
+
 .images{
     width: 500px;
     margin: 20px;
 }
 /*-------------Calculation Section----------*/
+
 .reality{
     margin-left : 70px;
 }
@@ -21,16 +26,19 @@ h1{
     margin-left: 40%;
   }
   /*-------------------Button---------------- */
+
 .button{
     width:70px;
     padding:10px; 
 }
 
-/*---------------Input Field Resize-----------*/
+/*----------------Input Field Resize-----------*/
+
 .resize{
     width:90px;
 }
-/*------------------Media Query----------*/
+/*------------------Media Query------------------*/
+
 @media screen  and (max-width:375px){
     .save{
         margin: 0;
