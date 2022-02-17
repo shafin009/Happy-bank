@@ -1,13 +1,13 @@
-/*--------------font type-----------*/
+/*--------------Font Type-----------*/
 h1{
     font-family: 'Luxurious Roman', cursive;
 }
-/*-----------------images-------------*/
+/*-----------------Images-------------*/
 .images{
     width: 500px;
     margin: 20px;
 }
-/*-------------calculation part----------*/
+/*-------------Calculation Section----------*/
 .reality{
     margin-left : 70px;
 }
@@ -20,11 +20,13 @@ h1{
     height:45px;
     margin-left: 40%;
   }
+  /*-------------------Button---------------- */
 .button{
     width:70px;
-    /* height:0px; */
     padding:10px; 
 }
+
+/*---------------Input Field Resize-----------*/
 .resize{
     width:90px;
 }
@@ -34,5 +36,11 @@ h1{
         margin: 0;
         padding: 0;
     }
-    
+    .images{
+        width: 350px;
+        height: fit-content;
+    }
+    .bill{
+        margin-left: 18px;
+    }
 }
